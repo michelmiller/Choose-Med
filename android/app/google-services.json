@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1087507032111",
+    "project_id": "choosemed-903a8",
+    "storage_bucket": "choosemed-903a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087507032111:android:f244184e28653fa330feda",
+        "android_client_info": {
+          "package_name": "com.choosemed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087507032111-2g0g8u5mikamj9cs0dhhi0m1122ov3kq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCByRpGkTo779kq9jZfxD27T1lAPWsG8Xg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087507032111-2g0g8u5mikamj9cs0dhhi0m1122ov3kq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
