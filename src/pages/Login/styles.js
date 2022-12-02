@@ -8,7 +8,7 @@ align-items: center;
 `;
 
 export const Title = styled.Text`
-color: #FFF;
+color: #00a1dc;
 font-size: 55px;
 font-weight: bold;
 font-style: italic;

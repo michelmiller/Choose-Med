@@ -16,7 +16,7 @@ export default function Login() {
     <Container>
       <Title>
         Choose
-        <Text style={{ color: '#e52246' }}>Med</Text>
+        <Text style={{ color: '#009d47' }}>Med</Text>
       </Title>
 
       <Input
@@ -40,10 +40,10 @@ export default function Login() {
 
  return (
   <Container>
-    <Title>
-      Dev 
-      <Text style={{ color: '#e52246' }}>Post</Text>
-    </Title>
+      <Title>
+        Choose 
+        <Text style={{ color: '#009d47' }}>Med</Text>
+      </Title>
 
     <Input
     placeholder="Nome"
