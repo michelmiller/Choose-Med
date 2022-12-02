@@ -5,11 +5,34 @@ import { Container, Title, Input, Button, ButtonText, SignUpButton, SignUpText} 
 
 export default function Login() {
   const [login, setLogin] = useState(true);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   function toggleLogin(){
     setLogin(!login);
+    setName('');
+    setEmail('');
+    setPassword('');
   }
 
+  function handleLogin(){
+    if(email === '' || password === ''){
+      console.log('Preencha todos os campos!');
+      return;
+    }
+
+    alert('Login')
+  }
+
+  function handleSignUp(){
+    if(name === '' || email === '' || password === ''){
+      console.log('Preencha todos os campos!');
+      return;  
+    }
+
+    alert('CADASTROU')
+  }
 
   if(login){
     return(
@@ -19,15 +42,20 @@ export default function Login() {
         <Text style={{ color: '#009d47' }}>Med</Text>
       </Title>
 
+
       <Input
       placeholder="email@email.com"
+      value={email}
+      onChangeText={ (text) => setEmail(text) }
       />
       <Input
       placeholder="******"
       secureTextEntry={true}
+      value={password}
+      onChangeText={ (text) => setPassword(text) }
       />
 
-      <Button onPress={ () => alert('TESTE') }>
+      <Button onPress={handleLogin}>
         <ButtonText>Acessar</ButtonText>
       </Button>
 
@@ -37,7 +65,6 @@ export default function Login() {
     </Container> 
     )
   }
-
  return (
   <Container>
       <Title>
@@ -45,18 +72,24 @@ export default function Login() {
         <Text style={{ color: '#009d47' }}>Med</Text>
       </Title>
 
-    <Input
-    placeholder="Nome"
+      <Input
+      placeholder="Nome"
+      value={name}
+      onChangeText={(text) => setName(text)}
     />
     <Input
-    placeholder="email@email.com"
+      placeholder="email@email.com"
+      value={email}
+      onChangeText={ (text) => setEmail(text) }
     />
     <Input
-    placeholder="******"
-    secureTextEntry={true}
+      placeholder="******"
+      secureTextEntry={true}
+      value={password}
+      onChangeText={ (text) => setPassword(text) }
     />
 
-    <Button onPress={ () => alert('TESTE') }>
+    <Button onPress={handleSignUp}>
       <ButtonText>Cadastrar</ButtonText>
     </Button>
 
