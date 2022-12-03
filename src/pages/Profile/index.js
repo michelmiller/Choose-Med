@@ -23,7 +23,7 @@ export default function Profile() {
     style={{
     flex:1,
     justifyContent: 'center',
-    alignItems: 'center',
+   
     backgroundColor: '#36393F'
 }}
 >
