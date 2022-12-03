@@ -18,12 +18,11 @@ function AppRoutes() {
    <Tab.Navigator
    tabBarOptions={{
      keyboardHidesTabBar: true,
-     showLabel: false,
+     showLabel: true,
      style:{
        backgroundColor: '#202225',
        borderTopWidth: 0,
      },
-
      activeTintColor: '#FFF'
    }}
    >
