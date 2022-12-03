@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 export default function Home() {
  return (
-   <View>
+   <View options={{ headerShown: false }}>
        <Text>Pagina Home</Text>
    </View>
   );

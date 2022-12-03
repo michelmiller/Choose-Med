@@ -11,10 +11,10 @@ const Tab = createBottomTabNavigator();
 
 function AppRoutes() {
  return (
-   <Tab.Navigator>
-       <Tab.Screen name="Home" component={Home} />
-       <Tab.Screen name="Search" component={Search} />
-       <Tab.Screen name="Profile" component={Profile} />
+   <Tab.Navigator >
+       <Tab.Screen name="Home" component={Home} options={{ headerShown: false }} />
+       <Tab.Screen name="Search" component={Search} options={{ headerShown: false }} />
+       <Tab.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
    </Tab.Navigator>
   );
 }
