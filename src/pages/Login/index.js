@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { View, Text } from 'react-native';
+
+import { AuthContext } from '../../contexts/auth'
 
 import { Container, Title, Input, Button, ButtonText, SignUpButton, SignUpText} from './styles';
 
 export default function Login() {
+  const { signUp } = useContext(AuthContext);
   const [login, setLogin] = useState(true);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -30,8 +33,8 @@ export default function Login() {
       console.log('Preencha todos os campos!');
       return;  
     }
-
-    alert('CADASTROU')
+    //cadastrando usuario!
+    signUp(email, password, name);
   }
 
   if(login){
