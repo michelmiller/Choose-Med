@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ActivityIndicator } from 'react-native';
 
 import { AuthContext } from '../../contexts/auth'
 
 import { Container, Title, Input, Button, ButtonText, SignUpButton, SignUpText} from './styles';
 
 export default function Login() {
-  const { signUp } = useContext(AuthContext);
+  const { signIn, signUp, loadingAuth } = useContext(AuthContext);
   const [login, setLogin] = useState(true);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -25,7 +25,7 @@ export default function Login() {
       return;
     }
 
-    alert('Login')
+    signIn(email, password);
   }
 
   function handleSignUp(){
@@ -59,7 +59,14 @@ export default function Login() {
       />
 
       <Button onPress={handleLogin}>
-        <ButtonText>Acessar</ButtonText>
+        {
+          loadingAuth ? (
+            <ActivityIndicator size={20} color="#FFF"/>
+          ) : (
+      <ButtonText>Acessar</ButtonText>
+          )
+        }
+        
       </Button>
 
       <SignUpButton onPress={ () => toggleLogin() }>
@@ -93,7 +100,13 @@ export default function Login() {
     />
 
     <Button onPress={handleSignUp}>
+    {
+          loadingAuth ? (
+            <ActivityIndicator size={20} color="#FFF"/>
+          ) : (
       <ButtonText>Cadastrar</ButtonText>
+          )
+        }
     </Button>
 
     <SignUpButton onPress={ () => toggleLogin() }>
