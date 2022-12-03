@@ -63,7 +63,7 @@ function AppRoutes() {
        />
 
        <Tab.Screen 
-       name="Search" 
+       name="Rendimentos" 
        component={Rendimentos} 
        options={{ headerShown: false,
           tabBarIcon: ({ color, size }) => {
