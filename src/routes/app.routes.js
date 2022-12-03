@@ -8,7 +8,7 @@ import Feather from 'react-native-vector-icons/Feather';
 
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
-import Search from '../pages/Search';
+import Rendimentos from '../pages/Rendimentos';
 import NewPost from '../pages/NewPost';
 import PostsUser from '../pages/PostsUser';
 import Bula from '../pages/Bula/bula';
@@ -64,10 +64,10 @@ function AppRoutes() {
 
        <Tab.Screen 
        name="Search" 
-       component={Search} 
+       component={Rendimentos} 
        options={{ headerShown: false,
           tabBarIcon: ({ color, size }) => {
-          return <Feather name="search" color={color} size={size} />
+          return <Feather name="dollar-sign" color={color} size={size} />
           }
         }}       
        />
