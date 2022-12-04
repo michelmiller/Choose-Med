@@ -11,25 +11,24 @@ export default function Profile() {
     let img = 'http://choosemed.com.br/wp-content/uploads/2021/09/logo_choose-166x37.png';
   
     return(
-      <View>
+        <View style={{  flex: 1, marginTop:0, width: '100%', justifyContent: 'center', backgroundColor: '#202225',  }}>
    <Image source={{ uri:img }} style={{ width: props.Largura, height: props.altura }} />
   
       </View>
     );
   }  
 
- return (
-   <View         
-    style={{
-    flex:1,
-    justifyContent: 'center',
-   
-    backgroundColor: '#36393F'
-}}
->
-<Logo  style={{margnTop:20}} Largura={166} altura={37} />
-       <Text style ={textColor = "white"}>Pagina Profile</Text>
-       <Button title="Sair" onPress={ () => signOut() }/>
+
+  return(
+    <View style={{  flex: 1, marginTop:0, width: '100%', justifyContent: 'center', backgroundColor: '#202225',  }}>
+    <Logo  style={{ alignItems: 'center',}} Largura={166} altura={37} />
+    <Button style={{paddingTop:0, width: '80%'}} title="Sair" onPress={ () => signOut() }/>
    </View>
   );
 }
+
+
+
+<Button style={{paddingTop:0}} title="Sair" onPress={ () => signOut() }/>
+
+
