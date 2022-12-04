@@ -20,9 +20,9 @@ export default function Profile() {
 
 
   return(
-    <View style={{  flex: 1, marginTop:0, width: '100%', justifyContent: 'center', backgroundColor: '#202225',  }}>
-    <Logo  style={{ alignItems: 'center',}} Largura={166} altura={37} />
-    <Button style={{paddingTop:0, width: '80%'}} title="Sair" onPress={ () => signOut() }/>
+    <View style={{  flex: 1, marginTop:0, justifyContent: 'center', backgroundColor: '#202225',  }}>
+    <Logo  style={{ alignItems: 'center', justifyContent: 'center' }} Largura={166} altura={37} />
+    <Button style={{paddingTop:0}} title="Sair" onPress={ () => signOut() }/>
    </View>
   );
 }
