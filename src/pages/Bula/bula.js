@@ -1,10 +1,22 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../contexts/auth';
 
-export default function Bula() {
+import { View, Text} from 'react-native';
+
+import { Container, UploadButton, UploadText, Avatar, Name, Email, Button, ButtonText } from './styles';
+import Header from '../../components/Header';
+
+export default function Profile() {
+  const { signOut, user } = useContext(AuthContext);
+
+  const [url, setUrl] = useState(null);
+
  return (
-   <View>
-       <Text>Bula</Text>
-   </View>
+   <Container>
+     <Header/>
+
+
+
+   </Container>
   );
 }
