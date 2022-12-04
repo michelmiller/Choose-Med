@@ -42,7 +42,7 @@ function AppRoutes() {
     >
        <Tab.Screen 
        name="Home" 
-       component={Home} 
+       component={StackScreen} 
        options={{ headerShown: false,
          tabBarIcon: ({ color, size })  => {
        
