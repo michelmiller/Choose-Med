@@ -1,34 +1,50 @@
-import React, { useContext } from 'react';
-import { View, Text, Button, Image} from 'react-native';
-
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/auth';
 
+import { View, Text} from 'react-native';
+
+import { Container, UploadButton, UploadText, Avatar, Name, Email, Button, ButtonText } from './styles';
+import Header from '../../components/Header';
+
+
+
 export default function Profile() {
-  const { signOut } = useContext(AuthContext);
+  const { signOut, user } = useContext(AuthContext);
 
-  function Logo(props){
-  
-    let img = 'http://choosemed.com.br/wp-content/uploads/2021/09/logo_choose-166x37.png';
-  
-    return(
-        <View style={{  flex: 1, marginTop:0, width: '100%', justifyContent: 'center', backgroundColor: '#202225',  }}>
-   <Image source={{ uri:img }} style={{ width: props.Largura, height: props.altura }} />
-  
-      </View>
-    );
-  }  
+  const [url, setUrl] = useState(null);
 
+ return (
+   <Container>
+     <Header/>
 
-  return(
-    <View style={{  flex: 1, marginTop:0, justifyContent: 'center', backgroundColor: '#202225',  }}>
-    <Logo  style={{ alignItems: 'center', justifyContent: 'center' }} Largura={166} altura={37} />
-    <Button style={{paddingTop:0}} title="Sair" onPress={ () => signOut() }/>
-   </View>
+    {
+      url ?
+      (
+        <UploadButton onPress={ () => alert('CLICOU') }>
+          <UploadText>+</UploadText>
+          <Avatar
+          source={{ uri: url }}
+          />
+        </UploadButton>
+      ) : 
+      (
+        <UploadButton onPress={ () => alert('CLICOU') }>
+          <UploadText>+</UploadText>
+        </UploadButton>   
+      )
+    }  
+
+    <Name numberOfLines={1}>{user.nome}</Name>
+    <Email  numberOfLines={1} >{user.email}</Email>
+
+    <Button bg="#428cfd" >
+      <ButtonText color="#FFF" >Atualizar perfil</ButtonText>
+    </Button>
+
+    <Button bg="#f1f1f1" onPress={ () => signOut() } >
+      <ButtonText color="#3b3b3b">Sair</ButtonText>
+    </Button>
+
+   </Container>
   );
 }
-
-
-
-<Button style={{paddingTop:0}} title="Sair" onPress={ () => signOut() }/>
-
-
