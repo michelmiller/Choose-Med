@@ -8,11 +8,11 @@ import Feather from 'react-native-vector-icons/Feather';
 
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
-import Rendimentos from '../pages/Saldo';
 import NewPost from '../pages/NewPost';
 import PostsUser from '../pages/PostsUser';
 import Bula from '../pages/Bula/bula';
-import Saldo from '../pages/Saldo';
+import Rendimento from '../pages/Rendimentos';
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -76,7 +76,7 @@ function AppRoutes() {
 
        <Tab.Screen 
        name="Saldo" 
-       component={Saldo} 
+       component={Rendimento} 
        options={{ headerShown: false,
           tabBarIcon: ({ color, size }) => {
           return <Feather name="dollar-sign" color={color} size={size} />

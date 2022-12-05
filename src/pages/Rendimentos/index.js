@@ -8,7 +8,7 @@ import Header from '../../components/Header';
 
 
 
-export default function Saldo() {
+export default function Rendimento() {
   const { signOut, user } = useContext(AuthContext);
 
   const [url, setUrl] = useState(null);
