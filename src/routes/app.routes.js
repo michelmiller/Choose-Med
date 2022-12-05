@@ -8,7 +8,7 @@ import Feather from 'react-native-vector-icons/Feather';
 
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
-import Rendimentos from '../pages/Rendimentos';
+import Rendimentos from '../pages/Saldo';
 import NewPost from '../pages/NewPost';
 import PostsUser from '../pages/PostsUser';
 import Bula from '../pages/Bula/bula';
