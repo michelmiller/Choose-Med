@@ -12,6 +12,7 @@ import NewPost from '../pages/NewPost';
 import PostsUser from '../pages/PostsUser';
 import Bula from '../pages/Bula/bula';
 import Rendimento from '../pages/Rendimentos';
+import Rendimentos from '../pages/Rendimentos';
 
 
 const Tab = createBottomTabNavigator();
@@ -76,7 +77,7 @@ function AppRoutes() {
 
        <Tab.Screen 
        name="Saldo" 
-       component={Rendimento} 
+       component={Rendimentos} 
        options={{ headerShown: false,
           tabBarIcon: ({ color, size }) => {
           return <Feather name="dollar-sign" color={color} size={size} />

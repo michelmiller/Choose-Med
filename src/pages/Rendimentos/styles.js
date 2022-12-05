@@ -1,69 +1,49 @@
 import styled from 'styled-components/native';
 
+
+
 export const Container = styled.View`
 flex:1;
+background-color: #131313;
 align-items: center;
-background-color: #353840;
 `;
 
-export const UploadButton = styled.TouchableOpacity`
-margin-top: 20%;
-background-color: #fff;
-width: 165px;
-height: 165px;
-border-radius: 90px;
+export const Nome = styled.Text`
+text-align: center;
+font-size: 28px;
+margin-top: 25px;
+margin-bottom: 25px;
+color: #FFF;
+`;
+
+export const NewLink = styled.TouchableOpacity`
 justify-content: center;
 align-items: center;
-z-index: 5;
+background-color: #00b94a;
+width: 90%;
+height: 45px; 
+border-radius: 10px;
+margin-bottom: 10px;
 `;
 
-export const UploadText = styled.Text`
-z-index: 9;
-position: absolute;
-font-size: 55px;
-color: #e52246;
-opacity: 0.4;
-`;
-
-export const Avatar = styled.Image`
-width: 160px;
-height: 160px;
-border-radius: 80px;
-opacity: 0.9;
-`;
-
-
-export const Name = styled.Text`
-margin-top: 20px;
-margin-left: 20px;
-margin-right: 20px;
-font-size: 28px;
+export const NewText = styled.Text`
+font-size: 18px;
 color: #FFF;
 font-weight: bold;
 `;
 
-export const Email = styled.Text`
-margin-top: 9px;
-margin-left: 20px;
-margin-right: 20px;
-margin-bottom: 10px;
-font-size: 20px;
-color: #DDD;
-font-style: italic;
-`;
-
-export const Button = styled.TouchableOpacity`
-margin-top: 12px;
-align-items: center;
+export const Logout = styled.TouchableOpacity`
 justify-content: center;
-background-color: ${props => props.bg};
-width: 80%;
-height: 45px;
-border-radius: 5px;
+align-items: center;
+background-color: #c62c36;
+width: 90%;
+height: 45px; 
+border-radius: 10px;
 `;
 
-export const ButtonText = styled.Text`
-font-size: 20px;
-color: ${props => props.color};
-font-style:  italic;
+export const LogoutText = styled.Text`
+font-size: 18px;
+color: #FFF;
+font-weight: bold;
 `;
+
