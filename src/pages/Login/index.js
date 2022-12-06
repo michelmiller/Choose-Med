@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
+import { View, Text, ActivityIndicator, Linking } from 'react-native';
 
 import { AuthContext } from '../../contexts/auth'
 
@@ -40,12 +40,15 @@ export default function Login() {
   if(login){
     return(
     <Container>
+      
       <Title>
         Choose
         <Text style={{ color: '#009d47' }}>Med</Text>
       </Title>
 
+        
 
+       
       <Input
       placeholder="email@email.com"
       value={email}
@@ -68,10 +71,29 @@ export default function Login() {
         }
         
       </Button>
-
+      
       <SignUpButton onPress={ () => toggleLogin() }>
-        <SignUpText>Criar uma conta.</SignUpText>
+        <SignUpText style='paddingTop:10'>Criar uma conta.</SignUpText>
       </SignUpButton>
+      <Button onPress={handleSignUp}>
+    {
+          loadingAuth ? (
+            <ActivityIndicator size={20} color="#FFF"/>
+          ) : (
+            <Button onPress={handleSignUp}>
+    {
+          loadingAuth ? (
+            <ActivityIndicator size={20} color="#FFF"/>
+          ) : (
+      <ButtonText  onPress={()=>{Linking.openURL('http://choosemed.com.br/')}}>BULAS</ButtonText>
+          )
+        }
+    </Button>
+          )
+        }
+    </Button>
+
+
     </Container> 
     )
   }
@@ -108,10 +130,12 @@ export default function Login() {
           )
         }
     </Button>
+    
 
     <SignUpButton onPress={ () => toggleLogin() }>
       <SignUpText>Já tenho uma conta.</SignUpText>
     </SignUpButton>
+    
   </Container> 
   );
 }
