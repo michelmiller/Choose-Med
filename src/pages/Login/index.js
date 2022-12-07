@@ -85,7 +85,7 @@ export default function Login() {
           loadingAuth ? (
             <ActivityIndicator size={20} color="#FFF"/>
           ) : (
-      <ButtonText  onPress={()=>{Linking.openURL('http://choosemed.com.br/')}}>BULAS</ButtonText>
+      <ButtonText  onPress={()=>{Linking.openURL('https://antigo.anvisa.gov.br/')}}>BULAS</ButtonText>
           )
         }
     </Button>
